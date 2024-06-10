@@ -1,0 +1,52 @@
+Choose XBox of PlayStation.
+PlayStation
+Choose Pizza or Burgers.
+Pizza
+Choose Batman or Superman.
+Batman
+Choose Coke or Pepsi.
+Coke
+Choose Marvel or DC.
+Marvel
+Choose Apple or Android.
+Apple
+Choose Coffee or Tea.
+Coffee
+Choose Summer or Winter.
+Summer
+Choose Cats or Dogs.
+Dogs
+Choose Books or Movies.
+Movies
+Choose Sweet or Savory.
+Sweet
+Choose Morning or Night.
+Night
+Choose Ice Cream or Cake.
+Ice Cream
+Choose Netflix or Hulu.
+Netflix
+Choose Beach or Mountains.
+Beach
+Choose Chocolate or Vanilla.
+Chocolate
+Choose Pasta or Rice.
+Pasta
+Choose Hot or Cold.
+Hot
+Choose City or Countryside.
+City
+Choose Football or Basketball.
+Basketball
+Choose Sneakers or Boots.
+Sneakers
+Choose Rain or Snow.
+Snow
+Choose Sunrise or Sunset.
+Sunset
+Choose Comedy or Drama.
+Comedy
+Choose Online or Offline.
+Online
+Choose Fiction or Non-Fiction.
+Fiction

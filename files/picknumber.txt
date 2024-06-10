@@ -1,0 +1,55 @@
+Pick a number between 3 and 11
+7
+Pick a number between 21 and 30
+26
+Pick a number between 4 and 10
+5
+Pick a number between 1 and 10
+8
+Pick a number between 1 and 7
+3
+Pick a number between 63 and 70
+69
+Pick a number between 5 and 10
+9
+Pick a number between 12 and 20
+15
+Pick a number between 40 and 50
+45
+Pick a number between 6 and 12
+11
+Pick a number between 2 and 9
+4
+Pick a number between 1 and 8
+7
+Pick a number between 80 and 90
+83
+Pick a number between 10 and 15
+12
+Pick a number between 30 and 40
+35
+Pick a number between 25 and 35
+27
+Pick a number between 50 and 60
+55
+Pick a number between 5 and 15
+10
+Pick a number between 70 and 80
+75
+Pick a number between 3 and 8
+6
+Pick a number between 18 and 25
+22
+Pick a number between 1 and 5
+2
+Pick a number between 60 and 70
+64
+Pick a number between 15 and 25
+20
+Pick a number between 35 and 45
+40
+Pick a number between 7 and 14
+9
+Pick a number between 90 and 100
+94
+
