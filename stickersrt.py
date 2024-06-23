@@ -21,7 +21,7 @@ def parse_srt(file_path):
         
     return subtitles
 
-def create_gif_timings(subtitles, gif_duration=4):
+def create_gif_timings(subtitles, gif_duration=3.5):
     # Delete the file "subtitles.srt"
 
     if os.path.isfile("gif_timings.srt"):
