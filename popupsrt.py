@@ -22,39 +22,21 @@ def parse_srt(file_path):
         
     return subtitles
 
-def create_empty_space_timings(gif_timings, video_length, empty_space_duration=3.5):
-    empty_space_duration = timedelta(seconds=empty_space_duration)
+def create_all_empty_space_timings(gif_timings, video_length):
     empty_timings = []
-
-    # Add the empty space between the start of the video and the first gif_timing
-    first_gif_start = gif_timings[0]['start_time']
-    video_start = datetime(1900, 1, 1, 0, 0, 0, 0)
-    if first_gif_start > video_start:
-        empty_timings.append({
-            'start_time': video_start,
-            'end_time': first_gif_start
-        })
-
-    for i in range(len(gif_timings) - 1):
-        current_end = gif_timings[i]['end_time']
-        next_start = gif_timings[i + 1]['start_time']
-        
-        gap = next_start - current_end
-        if gap > empty_space_duration:
-            empty_start = current_end + timedelta(seconds=0.5)
-            empty_end = empty_start + empty_space_duration
-            empty_timings.append({'start_time': empty_start, 'end_time': empty_end})
-    
-    # Add the last empty space between the end of the last gif_timing and the end of the video
-    last_gif_end = gif_timings[-1]['end_time']
     video_end = timedelta(seconds=float(video_length))
-    final_gap = video_end - (last_gif_end - datetime(1900, 1, 1))
-    if final_gap > empty_space_duration:
-        final_start = last_gif_end 
-        # + timedelta(seconds=0.5)
-        final_end = last_gif_end + final_gap
-        empty_timings.append({'start_time': final_start, 'end_time': final_end})
-    
+
+    previous_end = datetime(1900, 1, 1, 0, 0, 0, 0)
+
+    for timing in gif_timings:
+        current_start = timing['start_time']
+        if current_start > previous_end:
+            empty_timings.append({'start_time': previous_end, 'end_time': current_start})
+        previous_end = timing['end_time']
+
+    if previous_end < datetime(1900, 1, 1) + video_end:
+        empty_timings.append({'start_time': previous_end, 'end_time': datetime(1900, 1, 1) + video_end})
+
     return empty_timings
 
 def write_srt(file_path, timings):
@@ -73,7 +55,7 @@ def get_video_length(video_path):
 def create_empty_srt(gif_srt, video_path, new_srt):
     gif_timings = parse_srt(gif_srt)
     video_length = get_video_length(video_path)
-    empty_timings = create_empty_space_timings(gif_timings, video_length)
+    empty_timings = create_all_empty_space_timings(gif_timings, video_length)
     write_srt(new_srt, empty_timings)
 
     print(f"New SRT file with empty space timings created: {new_srt}")
