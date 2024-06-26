@@ -74,10 +74,16 @@ class VideoStickerOverlay:
 
 # Usage
 
-video_path = 'vids/20240623-111601.mp4'
-sticker_dir = 'stickers/bateman'
-srt_path = 'popup.srt'
-output_path = 'output_video.mp4'
+# video_path = 'vids/20240623-111601.mp4'
+# sticker_dir = 'stickers/bateman'
+# srt_path = 'popup.srt'
+# output_path = 'output_video.mp4'
+def main(video_path, sticker_dir, srt_path, output_path):
+    
+    overlay = VideoStickerOverlay(video_path, sticker_dir, srt_path, output_path)
+    overlay.add_sticker_to_video()
 
-overlay = VideoStickerOverlay(video_path, sticker_dir, srt_path, output_path)
-overlay.add_sticker_to_video()
+# if __name__ = "__main__":
+#     main(video_path, sticker_dir, srt_path, output_path);
+
+

@@ -9,9 +9,14 @@ from AddCaptions import add_captions
 from AddTimers import overlay_gif_on_video
 from stickersrt import srt_create
 import time
+import popupsrt
+import AddPopups
 
 def main():
-    script_queue = VidScript.script()
+    script_queue, answers = VidScript.script()
+   
+    for s in answers:
+        print(s)
 
 
     for s in script_queue:
@@ -50,15 +55,10 @@ def main():
     # create auto captions srt
     create_captions()
 
-    # add captions to video
+    # add captions to video 
     add_captions()
 
-    
-
-
-if __name__ == "__main__":
-    main()
-    # create srt for timer gif
+ # create srt for timer gif
     srt_create('subtitles.srt','gif_timings.srt')
 
 
@@ -77,7 +77,18 @@ if __name__ == "__main__":
 
     output_path = output_file
 
-    overlay_gif_on_video(video_path, gif_path, srt_path, output_path, position=("center", "center"))
+    overlay_gif_on_video(video_path, gif_path, srt_path, "output.mp4", position=("center", "center"))
 
     
+   # create SRT for popups
+    popupsrt.create_empty_srt('gif_timings.srt', "output.mp4", 'popup.srt')
+
+    # add popups to video
+    AddPopups.main("output.mp4", 'stickers/bateman', 'popup.srt', output_path)
+    
+    
+
+
+if __name__ == "__main__":
+    main()
    

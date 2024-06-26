@@ -36,6 +36,13 @@ def randomC():
 def randomQ1():
     return random_2_lines("files/celebs.txt")
 
+def randomQ2():
+    result = random_line("files/emojis.txt")
+    # while len(result) < 1:
+    #     result = random_line("files/emojis.txt")
+    return result
+
+
 def randomQ3():
     return random_2_lines("files/Questions.txt")
 
@@ -51,12 +58,17 @@ def end(string):
 def quip():
     return random_line("files/Quip.txt")
 
+
 def script():
+    answers = []
+
     script_queue = deque()
     script_queue.append("") # Question 1
     Q1 = randomQ1()
     script_queue.append(Q1[0])
     script_queue.append(end(Q1[1]))
+    
+    answers.append(Q1[1])
 
     script_queue.append(random_line("files/NoSame.txt"))
 
@@ -64,27 +76,39 @@ def script():
     script_queue.append("Press and hold the comment button and select one of the four emojis")
     script_queue.append(end("this one"))
 
+    
+
     script_queue.append("Question 3.")
     Q3 = randomQ3()
     script_queue.append(Q3[0])
     script_queue.append(end(Q3[1]))
+
+    answers.append(Q3[1])
 
     script_queue.append("Question 4.")
     Q4 = randomQ4()
     script_queue.append(Q4[0])
     script_queue.append(end(Q4[1]))
 
+
+    answers.append(Q4[1])
+
     script_queue.append("Question 5.")
     script_queue.append("Who appears when you click share and more?")
-    script_queue.append(end(random_line("files/Names.txt")))
+    Q5 = random_line("files/Names.txt")
+    script_queue.append(end(Q5))
     script_queue.append((random_line("files/Impossible.txt")))
+
+    answers.append(Q5)
 
     script_queue.append("Question 6.")
     Q6 = randomQ6()
     script_queue.append(Q6[0])
     script_queue.append(end(Q6[1]))
+    answers.append(Q6[1])
 
-    return script_queue
+    return script_queue, answers
+    
 
 def write_to_file(queue, file_name):
     try:
@@ -96,7 +120,7 @@ def write_to_file(queue, file_name):
 
 
 if __name__ == "__main__":
-    script_queue = script()
+    script_queue, answers = script()
     for s in script_queue:
         print(s) 
 
@@ -113,8 +137,6 @@ if __name__ == "__main__":
     text_to_speech_file(string[5], "P6.mp3")
     text_to_speech_file(string[6], "P7.mp3")
    
-
-
 
 
 #if __name__ == "__main__":
