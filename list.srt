@@ -1,0 +1,63 @@
+1
+00:00:00,000 --> 00:00:05,774
+1. Easy (green)
+2. Easy (green)
+3. Medium (yellow)
+4. Medium (yellow)
+5. Hard (red)
+6. Impossible (purple)
+
+2
+00:00:05,774 --> 00:00:25,478
+1. BBC (green)
+2. Easy (green)
+3. Medium (yellow)
+4. Medium (yellow)
+5. Hard (red)
+6. Impossible (purple)
+
+3
+00:00:25,478 --> 00:00:35,570
+1. BBC (green)
+2. 👍 (green)
+3. Medium (yellow)
+4. Medium (yellow)
+5. Hard (red)
+6. Impossible (purple)
+
+4
+00:00:35,570 --> 00:00:47,234
+1. BBC (green)
+2. 👍 (green)
+3. poodle (yellow)
+4. Medium (yellow)
+5. Hard (red)
+6. Impossible (purple)
+
+5
+00:00:47,234 --> 00:01:01,114
+1. BBC (green)
+2. 👍 (green)
+3. poodle (yellow)
+4. 26 (yellow)
+5. Hard (red)
+6. Impossible (purple)
+
+6
+00:01:01,114 --> 00:01:08,242
+1. BBC (green)
+2. 👍 (green)
+3. poodle (yellow)
+4. 26 (yellow)
+5. Your Professor (red)
+6. Impossible (purple)
+
+7
+00:01:08,242 --> 00:01:17,714
+1. BBC (green)
+2. 👍 (green)
+3. poodle (yellow)
+4. 26 (yellow)
+5. Your Professor (red)
+6. Comedy (purple)
+
