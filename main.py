@@ -53,20 +53,24 @@ def main():
 
     # get background vid
     vid_create()
+    # output.mp4
 
     # create auto captions srt
     create_captions()
+    
 
     # add captions to video 
     add_captions()
+    # coutput.mp4 --> captionoutput.mp4
+
 
  # create srt for timer gif
     srt_create('subtitles.srt','gif_timings.srt')
 
 
-    # tag video with timestamp
-    timestamp = time.strftime("%Y%m%d-%H%M%S")
-    output_file = f"vids/{timestamp}.mp4"
+    # # tag video with timestamp
+    # timestamp = time.strftime("%Y%m%d-%H%M%S")
+    # output_file = f"vids/{timestamp}.mp4"
 
 
     # Overlay timer GIF on the video
@@ -74,19 +78,24 @@ def main():
     gif_path = 'Assets/Timer/timer2.gif'
     srt_path = 'gif_timings.srt'
 
+    #captionoutput.mp4 --> output.mp4
 
-
-    overlay_gif_on_video(video_path, gif_path, srt_path, video_path, position=("center", "center"))
+    overlay_gif_on_video(video_path, gif_path, srt_path, "output.mp4", position=("center", "center"))
 
     
    # create SRT for popups
     popupsrt.create_empty_srt('gif_timings.srt', "output.mp4", 'popup.srt')
 
     # add popups to video
-    AddPopups.main("output.mp4", 'stickers/bateman', 'popup.srt', video_path)
+    AddPopups.main("output.mp4", 'stickers/bateman', 'popup.srt', "output2.mp4")
+    
+    # output.mp4 --> output2.mp4 
 
     # create list srt
      # Example usage
+
+
+
     subtitles_file = 'subtitles.srt'
     new_srt_file = 'list.srt'
     # answers = ['BBC', '👍', 'poodle', '26', 'Your Professor', 'Comedy']
@@ -95,12 +104,12 @@ def main():
     answers2[1] = "this one"
 
     timestamps = listsrt.extract_timestamps(subtitles_file, answers2)
-    final_timestamp = listsrt.get_final_timestamp(subtitles_file)
+    # final_timestamp = listsrt.get_final_timestamp(subtitles_file)
 
-    if len(timestamps) == len(answers2):
-        listsrt.create_new_srt(new_srt_file, timestamps, answers, final_timestamp)
-    else:
-        print("Not all timestamps found. Please check the input SRT file and the answers array.")
+    # if len(timestamps) == len(answers2):
+    listsrt.create_new_srt(new_srt_file, timestamps, answers)
+    # else:
+    #     print("Not all timestamps found. Please check the input SRT file and the answers array.")
 
 
 
@@ -114,7 +123,7 @@ def main():
     srt_path = 'list.srt'  # Ensure you have the correct path to your SRT file
     
 
-    AddList.add_text_to_video(video_path, srt_path, output_path)
+    AddList.add_text_to_video("output2.mp4", srt_path, output_path)
 
 
 if __name__ == "__main__":

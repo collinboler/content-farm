@@ -68,7 +68,7 @@ def add_audio_to_video(video_path, audio_path):
 # Example usage with your file paths
 
 if __name__ == "__main__":
-    video_path = 'vids/20240607-224147.mp4'
+    video_path = 'vids/20240626-182928.mp4'
     gif_path = 'Assets/Timer/timer2.gif'
     srt_path = 'gif_timings.srt'
     output_path = 'StickerVid.mp4'

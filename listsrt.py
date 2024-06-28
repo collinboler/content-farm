@@ -44,10 +44,10 @@ def create_new_srt(new_srt_file, timestamps, answers):
                 file.write(f'{len(timestamps) + 2}\n{end} --> {end}\n{final_section}\n\n')
 
 # Example usage
-subtitles_file = 'subtitles.srt'
-new_srt_file = 'list.srt'
-answers = ['Ninja', '🤣', 'Soccer', '64', 'Your Librarian', 'Basketball']
-answers2 = answers.copy()
-answers2[1] = "this one,"
-timestamps = extract_timestamps(subtitles_file, answers2)
-create_new_srt(new_srt_file, timestamps, answers)
+# subtitles_file = 'subtitles.srt'
+# new_srt_file = 'list.srt'
+# answers = ['Ninja', '🤣', 'Soccer', '64', 'Your Librarian', 'Basketball']
+# answers2 = answers.copy()
+# answers2[1] = "this one,"
+# timestamps = extract_timestamps(subtitles_file, answers2)
+# create_new_srt(new_srt_file, timestamps, answers)

@@ -1,5 +1,5 @@
 1
-00:00:00,000 --> 00:00:07,998
+00:00:00,000 --> 00:00:27,126
 1. Easy (green)
 2. Easy (green)
 3. Medium (yellow)
@@ -8,8 +8,8 @@
 6. Impossible (purple)
 
 2
-00:00:07,998 --> 00:00:25,206
-1. Ninja (green)
+00:00:27,126 --> 00:00:38,718
+1. LeBron James (green)
 2. Easy (green)
 3. Medium (yellow)
 4. Medium (yellow)
@@ -17,56 +17,38 @@
 6. Impossible (purple)
 
 3
-00:00:25,206 --> 00:00:33,416
-1. Ninja (green)
-2. 🤣 (green)
+00:00:38,718 --> 00:01:08,588
+1. LeBron James (green)
+2. 😆 (green)
 3. Medium (yellow)
 4. Medium (yellow)
 5. Hard (red)
 6. Impossible (purple)
 
 4
-00:00:33,416 --> 00:00:46,320
-1. Ninja (green)
-2. 🤣 (green)
-3. Soccer (yellow)
+00:01:08,588 --> 00:01:14,860
+1. LeBron James (green)
+2. 😆 (green)
+3. salsa (yellow)
 4. Medium (yellow)
 5. Hard (red)
 6. Impossible (purple)
 
 5
-00:00:46,320 --> 00:01:05,664
-1. Ninja (green)
-2. 🤣 (green)
-3. Soccer (yellow)
-4. 64 (yellow)
+00:01:14,860 --> 00:01:16,300
+1. LeBron James (green)
+2. 😆 (green)
+3. salsa (yellow)
+4. 5 (yellow)
 5. Hard (red)
 6. Impossible (purple)
 
 6
-00:01:05,664 --> 00:01:12,312
-1. Ninja (green)
-2. 🤣 (green)
-3. Soccer (yellow)
-4. 64 (yellow)
-5. Your Librarian (red)
-6. Impossible (purple)
-
-7
-00:01:12,312 --> 00:01:13,440
-1. Ninja (green)
-2. 🤣 (green)
-3. Soccer (yellow)
-4. 64 (yellow)
-5. Your Librarian (red)
-6. Basketball (purple)
-
-8
-00:01:13,440 --> 00:01:13,440
-1. Ninja (green)
-2. 🤣 (green)
-3. Soccer (yellow)
-4. 64 (yellow)
-5. Your Librarian (red)
-6. Basketball (purple)
+00:01:16,300 --> 00:01:16,300
+1. LeBron James (green)
+2. 😆 (green)
+3. salsa (yellow)
+4. 5 (yellow)
+5. Your Tailor (red)
+6. PlayStation (purple)
 

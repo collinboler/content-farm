@@ -7,12 +7,8 @@ def add_captions():
     # Define file paths
     video_file = "output.mp4"
     subtitle_file = "subtitles.srt"
-
-
-
     
     output_file = "captionoutput.mp4"
-
 
     # Delete the file "captionoutput.mp4" if it exists
     if os.path.isfile(output_file):
@@ -68,7 +64,8 @@ def add_captions():
         # Rest of the code...
 
     if __name__ == "__main__":
-        add_captions()
+        output_file = "captionoutput.mp4"
+        
 
     # Delete the file "captionoutput.mp4" if it exists
     if os.path.isfile(output_file):
@@ -108,5 +105,5 @@ def add_captions():
 
 
 
-if __name__ == "__main__":
-    add_captions()
+# if __name__ == "__main__":
+#     add_captions()
