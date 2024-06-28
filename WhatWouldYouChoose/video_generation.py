@@ -1,13 +1,13 @@
-import os
+import os, random
 from moviepy.editor import VideoFileClip, ImageClip, concatenate_videoclips, TextClip, CompositeVideoClip
 from moviepy.video.fx.all import crop
 
 # Define the path to your assets
 short_video_path = "initial_videos/beach_background.mp4"
 image_folder_path = "generated_images/test1"
-texts = ["Text for image 1", "Text for image 2", "Text for image 3", "Text for image 4", 
-         "Text for image 5", "Text for image 6", "Text for image 7", "Text for image 8", 
-         "Text for image 9", "Text for image 10", "Text for image 11", "Text for image 12"]
+texts = ["1", "2", "3", "4", 
+         "5", "6", "7", "8", 
+         "9", "10", "11", "12"]
 
 # Get all image file paths from the specified folder
 image_paths = sorted([os.path.join(image_folder_path, file) for file in os.listdir(image_folder_path) if file.lower().endswith(('.png', '.jpg', '.jpeg'))])
@@ -19,39 +19,48 @@ if len(image_paths) != 12:
 # Load the short video clip
 short_video = VideoFileClip(short_video_path)
 
-# Crop the short video to 1080x1920
-cropped_video = crop(short_video, width=1080, height=1920, x_center=short_video.w/2, y_center=short_video.h/2)
+video_duration = short_video.duration
+
+# Choose a random start time within the video duration (subtracting 5 seconds to ensure we don't exceed the video length)
+start_time = random.uniform(0, video_duration - 5)
+
+# Extract a 5-second subclip starting from the randomly chosen start time
+short_video = short_video.subclip(start_time, start_time + 8)
+
+# Resize the cropped video to 1080x1920 (if needed)
+resized_video = short_video.resize(height=1920, width=1080)
+
+# Crop the short video to 1920x1080
+cropped_video = resized_video.crop(x1=0, y1=0 / 2, x2=1080, y2=1920)
+
+# Create a text clip
+text_clip = TextClip(f"Which bathroom\n is your boyfriend \n choosing?", fontsize=60, color='white', bg_color='black')
+text_clip = text_clip.set_position((270, 600)).set_duration(7)
+
+# Overlay the text on the image
+composite_clip = CompositeVideoClip([cropped_video, text_clip])
 
 # Calculate the duration each image should be displayed
 image_duration = (60 - cropped_video.duration) / 12
 
 # Create a list to hold all the clips
-clips = [cropped_video]
-
-# Function to apply subtle motion to an image clip
-def apply_motion(image_clip, duration):
-    def make_frame(t):
-        x_mov = 20 * (t / duration)  # horizontal motion
-        y_mov = 10 * (t / duration)  # vertical motion
-        return image_clip.crop(x1=x_mov, y1=y_mov, width=1080, height=1920).get_frame(t)
-    
-    return image_clip.fl(make_frame)
+clips = [composite_clip]
 
 # Create image clips with text overlays
 for image_path, text in zip(image_paths, texts):
     # Load the image
     image_clip = ImageClip(image_path).set_duration(image_duration).resize(height=1920)
 
+    image_clip = image_clip.resize(lambda t : 1+0.01*t)
+    image_clip = image_clip.set_position(('center', 'center'))
+
     # Center-crop the image to 1080x1920 if its width is larger than 1080
     if image_clip.w > 1080:
         image_clip = image_clip.crop(x_center=image_clip.w/2, y_center=image_clip.h/2, width=1080, height=1920)
 
-    # Apply subtle motion effect
-    #image_clip = apply_motion(image_clip, image_duration)
-
     # Create a text clip
-    text_clip = TextClip(text, fontsize=24, color='white', bg_color='black')
-    text_clip = text_clip.set_position('center').set_duration(image_duration)
+    text_clip = TextClip(text, fontsize=100, color='white', bg_color='black')
+    text_clip = text_clip.set_position((600,400)).set_duration(image_duration)
 
     # Overlay the text on the image
     composite_clip = CompositeVideoClip([image_clip, text_clip])
