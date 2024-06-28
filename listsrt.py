@@ -38,16 +38,16 @@ def create_new_srt(new_srt_file, timestamps, answers):
         for i, (start, end) in enumerate(timestamps):
             if i < len(timestamps) - 1:
                 file.write(f'{i+2}\n{start} --> {timestamps[i+1][0]}\n{sections[i+1]}\n\n')
-            # else:
-            #     file.write(f'{i+2}\n{start} --> {end}\n{sections[i+1]}\n\n')
-            #     final_section = f'1. {answers[0]} (green)\n2. {answers[1]} (green)\n3. {answers[2]} (yellow)\n4. {answers[3]} (yellow)\n5. {answers[4]} (red)\n6. {answers[5]} (purple)'
-            #     file.write(f'{len(timestamps) + 2}\n{end} --> {end}\n{final_section}\n\n')
+            else:
+                file.write(f'{i+2}\n{start} --> {end}\n{sections[i+1]}\n\n')
+                final_section = f'1. {answers[0]} (green)\n2. {answers[1]} (green)\n3. {answers[2]} (yellow)\n4. {answers[3]} (yellow)\n5. {answers[4]} (red)\n6. {answers[5]} (purple)'
+                file.write(f'{len(timestamps) + 2}\n{end} --> {end}\n{final_section}\n\n')
 
 # Example usage
 subtitles_file = 'subtitles.srt'
 new_srt_file = 'list.srt'
 answers = ['Ninja', '🤣', 'Soccer', '64', 'Your Librarian', 'Basketball']
 answers2 = answers.copy()
-answers2[1] = "this one"
+answers2[1] = "this one,"
 timestamps = extract_timestamps(subtitles_file, answers2)
 create_new_srt(new_srt_file, timestamps, answers)
