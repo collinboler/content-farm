@@ -97,6 +97,13 @@ def add_text_to_video(video_path, srt_path, output_path):
     final_clip.write_videofile(output_path, codec='libx264', audio_codec='aac')
 
 # Usage
+if __name__ == "__main__":
+    video_path = 'output2.mp4'
+    srt_path = 'list.srt'  # Ensure you have the correct path to your SRT file
+    output_path = 'output_video2.mp4'
+
+    add_text_to_video(video_path, srt_path, output_path)
+
 # video_path = 'output_video.mp4'
 # srt_path = 'list.srt'  # Ensure you have the correct path to your SRT file
 # output_path = 'output_video2.mp4'

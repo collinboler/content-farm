@@ -7,12 +7,15 @@ from VidAdd import vid_create
 from Captions import create_captions
 from AddCaptions import add_captions
 from AddTimers import overlay_gif_on_video
+from AddTimers import add_audio_to_video
 from stickersrt import srt_create
+
 import time
 import popupsrt
 import AddPopups
 import AddList
 import listsrt
+
 
 def main():
     script_queue, answers = VidScript.script()
@@ -77,16 +80,20 @@ def main():
     video_path = 'captionoutput.mp4'
     gif_path = 'Assets/Timer/timer2.gif'
     srt_path = 'gif_timings.srt'
+    output_path = 'output.mp4'
 
     #captionoutput.mp4 --> output.mp4
 
-    overlay_gif_on_video(video_path, gif_path, srt_path, "output.mp4", position=("center", "center"))
+    overlay_gif_on_video(video_path, gif_path, srt_path, output_path, position=("center", "center"))
+    add_audio_to_video(output_path, "finalresult.mp3")
+
 
     
    # create SRT for popups
     popupsrt.create_empty_srt('gif_timings.srt', "output.mp4", 'popup.srt')
 
     # add popups to video
+
     AddPopups.main("output.mp4", 'stickers/bateman', 'popup.srt', "output2.mp4")
     
     # output.mp4 --> output2.mp4 
@@ -96,8 +103,8 @@ def main():
 
 
 
-    subtitles_file = 'subtitles.srt'
-    new_srt_file = 'list.srt'
+    subtitles_file = "subtitles.srt"
+    new_srt_file = "list.srt"
     # answers = ['BBC', '👍', 'poodle', '26', 'Your Professor', 'Comedy']
     
     answers2 = answers.copy()
@@ -120,7 +127,7 @@ def main():
     output_path = output_file
     # ad list
    
-    srt_path = 'list.srt'  # Ensure you have the correct path to your SRT file
+    srt_path = "list.srt"  # Ensure you have the correct path to your SRT file
     
 
     AddList.add_text_to_video("output2.mp4", srt_path, output_path)
