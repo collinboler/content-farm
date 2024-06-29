@@ -1,8 +1,5 @@
-from moviepy.editor import VideoFileClip, CompositeVideoClip, AudioClip
+from moviepy.editor import VideoFileClip, CompositeVideoClip, AudioFileClip
 import pysrt
-
-from moviepy.editor import VideoFileClip, AudioFileClip
-
 
 def parse_srt_for_gif_timing(srt_path):
     subs = pysrt.open(srt_path)
@@ -25,26 +22,23 @@ def overlay_gif_on_video(video_path, gif_path, srt_path, output_path, position=(
     
     # Parse the SRT file for GIF timings
     gif_timings = parse_srt_for_gif_timing(srt_path)
+    print(f"Parsed GIF timings: {gif_timings}")  # Debug print
     
     # Create a list to hold the GIF clips with their timings
     gif_clips = []
     for start_time, end_time in gif_timings:
-        gif_clip_instance = gif_clip.subclip(0, end_time - start_time).set_start(start_time).set_position(position)
-        gif_clips.append(gif_clip_instance)
+        print(f"Adding GIF from {start_time} to {end_time}")  # Debug print
+        gif_instance = gif_clip.subclip(0, end_time - start_time).set_start(start_time).set_position(position)
+        gif_clips.append(gif_instance)
     
     # Create a composite video clip with the GIF overlaid on the video
     final_clip = CompositeVideoClip([video_clip] + gif_clips)
-
-    audio = AudioFileClip("finalresult.mp3")
-    final_clip = final_clip.set_audio(audio)
-
+    
+    # Set the audio of the final clip to the audio of the original video
+    final_clip = final_clip.set_audio(video_clip.audio)
+    
     # Write the output video file
-    final_clip.write_videofile(output_path, codec='libx264', audio_codec='aac')
-
-    # Replace the audio of the video clip with the MP3 audio
-    # ideo_clip = video_clip.set_audio(audio)
-
-
+    final_clip.write_videofile(output_path, codec="libx264")
 
 def add_audio_to_video(video_path, audio_path):
     # Load the video clip
@@ -66,11 +60,11 @@ def add_audio_to_video(video_path, audio_path):
     final_clip.write_videofile(video_path, codec='libx264', audio_codec='aac')
 
 # Example usage with your file paths
-
 if __name__ == "__main__":
-    video_path = 'vids/20240626-182928.mp4'
+
+    video_path = 'output_video2.mp4'
     gif_path = 'Assets/Timer/timer2.gif'
-    srt_path = 'gif_timings.srt'
+    srt_path = parse_srt_for_gif_timing("subtitles.srt")
     output_path = 'StickerVid.mp4'
 
     overlay_gif_on_video(video_path, gif_path, srt_path, output_path, position=("center", "center"))

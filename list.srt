@@ -9,7 +9,7 @@
 
 2
 00:00:07,054 --> 00:00:26,302
-1. Buffalo (green)
+1. Buffalo Bills (green)
 2. Easy (green)
 3. Medium (yellow)
 4. Medium (yellow)
@@ -18,7 +18,7 @@
 
 3
 00:00:26,302 --> 00:00:36,438
-1. Buffalo (green)
+1. Buffalo Bills (green)
 2. 💕 (green)
 3. Medium (yellow)
 4. Medium (yellow)
@@ -27,7 +27,7 @@
 
 4
 00:00:36,438 --> 00:00:49,766
-1. Buffalo (green)
+1. Buffalo Bills (green)
 2. 💕 (green)
 3. Orion (yellow)
 4. Medium (yellow)
@@ -36,7 +36,7 @@
 
 5
 00:00:49,766 --> 00:01:02,336
-1. Buffalo (green)
+1. Buffalo Bills (green)
 2. 💕 (green)
 3. Orion (yellow)
 4. 64 (yellow)
@@ -45,7 +45,7 @@
 
 6
 00:01:02,336 --> 00:01:18,408
-1. Buffalo (green)
+1. Buffalo Bills (green)
 2. 💕 (green)
 3. Orion (yellow)
 4. 64 (yellow)
@@ -54,7 +54,7 @@
 
 7
 00:01:18,408 --> 00:01:21,368
-1. Buffalo (green)
+1. Buffalo Bills (green)
 2. 💕 (green)
 3. Orion (yellow)
 4. 64 (yellow)

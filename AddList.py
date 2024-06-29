@@ -57,10 +57,10 @@ def draw_text_with_stroke(draw, position, text, font, text_color, stroke_color, 
 def create_text_image(text, image_size):
     image = Image.new('RGBA', image_size, (255, 255, 255, 0))
     draw = ImageDraw.Draw(image)
-    bold_font = ImageFont.truetype("Assets/Fonts/boldfont.ttf", 50)  # Bold font
+    bold_font = ImageFont.truetype("Assets/Fonts/boldfont.ttf", 60)  # Bold font
     emoji_font = ImageFont.truetype("/System/Library/Fonts/Apple Color Emoji.ttc", 40)  # Font that supports emojis
 
-    text_x, text_y = image_size[0] // 2.5, image_size[1] // 8  # Position text more centered to the top right
+    text_x, text_y = image_size[0] // 5, image_size[1] // 8  # Position text more centered to the top right
     lines = text.split('\n')
     for line in lines:
         text, color = extract_color(line)
@@ -73,7 +73,7 @@ def create_text_image(text, image_size):
             text_x += draw.textbbox((0, 0), part, font=font)[2]
         
         text_y += bold_font.getbbox(line)[3]
-        text_x = image_size[0] // 2.5  # Reset x position after each line
+        text_x = image_size[0] // 5  # Reset x position after each line
 
     combined_path = 'text_overlay.png'
     image.save(combined_path)

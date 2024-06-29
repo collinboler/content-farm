@@ -57,8 +57,11 @@ def create_new_srt(new_srt_file, timestamps, answers):
 # Example usage
 subtitles_file = 'subtitles.srt'
 new_srt_file = 'list.srt'
-answers = ['Buffalo', '💕', 'Orion', '64', 'Uncle', 'PlayStation']
-answers2 = answers.copy()
+answers = ['Buffalo Bills', '💕', 'Orion', '64', 'Uncle', 'PlayStation']
+
+# Copy answers to answers2 and modify as specified
+answers2 = [answer.split()[0] if len(answer.split()) > 1 else answer for answer in answers]
+answers2[1] = "specific"
 answers2[1] = "specific"
 timestamps = extract_timestamps(subtitles_file, answers2)
 create_new_srt(new_srt_file, timestamps, answers)
