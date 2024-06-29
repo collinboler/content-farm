@@ -74,7 +74,7 @@ def script():
 
     script_queue.append("Question 2.")
     script_queue.append("Press and hold the comment button and select one of the four emojis")
-    script_queue.append(end("this one"))
+    script_queue.append(end("this specific emoji"))
 
     answers.append(randomQ2())
 
