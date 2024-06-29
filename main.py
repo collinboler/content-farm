@@ -6,10 +6,10 @@ from text_to_speech_file import text_to_speech_file
 from VidAdd import vid_create
 from Captions import create_captions
 from AddCaptions import add_captions
-from AddTimers import overlay_gif_on_video
-from AddTimers import add_audio_to_video
+# from AddTimers import overlay_gif_on_video
+# from AddTimers import add_audio_to_video
 from stickersrt import srt_create
-
+import AddTimers
 import time
 import popupsrt
 import AddPopups
@@ -84,8 +84,9 @@ def main():
 
     #captionoutput.mp4 --> output.mp4
 
-    overlay_gif_on_video(video_path, gif_path, srt_path, output_path, position=("center", "center"))
-    add_audio_to_video(output_path, "finalresult.mp3")
+    AddTimers.add_gif_to_video(video_path, gif_path, srt_path, output_path)
+    # overlay_gif_on_video(video_path, gif_path, srt_path, output_path, position=("center", "center"))
+    # add_audio_to_video(output_path, "finalresult.mp3")
 
 
     
@@ -131,6 +132,26 @@ def main():
     
 
     AddList.add_text_to_video("output2.mp4", srt_path, output_path)
+
+    # add_audio_to_video(output_path, "finalresult.mp3")
+    # def add_audio_to_video(video_path, audio_path):
+    #     """
+    #     Add audio to a video file.
+
+    #     Args:
+    #         video_path (str): Path to the video file.
+    #         audio_path (str): Path to the audio file.
+
+    #     Returns:
+    #         None
+    #     """
+    #     import moviepy.editor as mp
+
+    #     video = mp.VideoFileClip(video_path)
+    #     audio = mp.AudioFileClip(audio_path)
+
+    #     video = video.set_audio(audio)
+    #     video.write_videofile("output.mp4", codec="libx264", audio_codec="aac")
 
 
 if __name__ == "__main__":
