@@ -89,6 +89,7 @@ def main():
     # add_audio_to_video(output_path, "finalresult.mp3")
 
 
+
     
    # create SRT for popups
     popupsrt.create_empty_srt('gif_timings.srt', "output.mp4", 'popup.srt')
@@ -103,19 +104,29 @@ def main():
      # Example usage
 
 
+    # Example usage
+    subtitles_file = 'subtitles.srt'
+    new_srt_file = 'list.srt'
+    
+
+    # Copy answers to answers2 and modify as specified
+    answers2 = [answer.split()[0] if len(answer.split()) > 1 else answer for answer in answers]
+    answers2[1] = "specific"
+    timestamps = listsrt.extract_timestamps(subtitles_file, answers2)
+    listsrt.create_new_srt(new_srt_file, timestamps, answers)
+
 
     subtitles_file = "subtitles.srt"
-    new_srt_file = "list.srt"
     # answers = ['BBC', '👍', 'poodle', '26', 'Your Professor', 'Comedy']
     
     answers2 = answers.copy()
     answers2[1] = "this one"
 
-    timestamps = listsrt.extract_timestamps(subtitles_file, answers2)
-    # final_timestamp = listsrt.get_final_timestamp(subtitles_file)
+    # timestamps = listsrt.extract_timestamps(subtitles_file, answers2)
+    # # final_timestamp = listsrt.get_final_timestamp(subtitles_file)
 
-    # if len(timestamps) == len(answers2):
-    listsrt.create_new_srt(new_srt_file, timestamps, answers)
+    # # if len(timestamps) == len(answers2):
+    # listsrt.create_new_srt(new_srt_file, timestamps, answers)
     # else:
     #     print("Not all timestamps found. Please check the input SRT file and the answers array.")
 
