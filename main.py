@@ -15,7 +15,7 @@ import popupsrt
 import AddPopups
 import AddList
 import listsrt
-
+from moviepy.editor import VideoFileClip
 
 def main():
     script_queue, answers = VidScript.script()
@@ -80,7 +80,7 @@ def main():
     video_path = 'output.mp4'
     gif_path = 'Assets/Timer/timer2.gif'
     srt_path = 'gif_timings.srt'
-    output_path = 'output.mp4'
+    output_path = 'StickerVid.mp4'
 
     #captionoutput.mp4 --> output.mp4
 
@@ -92,11 +92,11 @@ def main():
 
     
    # create SRT for popups
-    popupsrt.create_empty_srt('gif_timings.srt', "output.mp4", 'popup.srt')
+    popupsrt.create_empty_srt('gif_timings.srt', "StickerVid.mp4", 'popup.srt')
 
     # add popups to video
 
-    AddPopups.main("output.mp4", 'stickers/bateman', 'popup.srt', "output.mp4")
+    AddPopups.main("StickerVid.mp4", 'stickers/bateman', 'popup.srt', "output.mp4")
     
     # output.mp4 --> output2.mp4 
 
@@ -107,22 +107,23 @@ def main():
 
 
     # Example usage
-    subtitles_file = 'subtitles.srt'
-    new_srt_file = 'list.srt'
-    
+    # subtitles_file = 'subtitles.srt'
+    # new_srt_file = 'list.srt'
+
+    listsrt.main(answers)
 
     # Copy answers to answers2 and modify as specified
-    answers2 = [answer.split()[0] if len(answer.split()) > 1 else answer for answer in answers]
-    answers2[1] = "specific"
-    timestamps = listsrt.extract_timestamps(subtitles_file, answers2)
-    listsrt.create_new_srt(new_srt_file, timestamps, answers)
+    # answers2 = [answer.split()[0] if len(answer.split()) > 1 else answer for answer in answers]
+    # answers2[1] = "specific"
+    # timestamps = listsrt.extract_timestamps(subtitles_file, answers2)
+    # listsrt.create_new_srt(new_srt_file, timestamps, answers)
 
 
-    subtitles_file = "subtitles.srt"
-    # answers = ['BBC', '👍', 'poodle', '26', 'Your Professor', 'Comedy']
+    # subtitles_file = "subtitles.srt"
+    # # answers = ['BBC', '👍', 'poodle', '26', 'Your Professor', 'Comedy']
     
-    answers2 = answers.copy()
-    answers2[1] = "this one"
+    # answers2 = answers.copy()
+    # answers2[1] = "this one"
 
     # timestamps = listsrt.extract_timestamps(subtitles_file, answers2)
     # # final_timestamp = listsrt.get_final_timestamp(subtitles_file)
@@ -146,6 +147,8 @@ def main():
 
     AddList.add_text_to_video("captionoutput.mp4", srt_path, output_path)
 
+    increase_volume("captionoutput.mp4", "output.mp4")
+
     # add_audio_to_video(output_path, "finalresult.mp3")
     # def add_audio_to_video(video_path, audio_path):
     #     """
@@ -165,6 +168,19 @@ def main():
 
     #     video = video.set_audio(audio)
     #     video.write_videofile("output.mp4", codec="libx264", audio_codec="aac")
+
+
+def increase_volume(input_video_path, output_video_path, factor=3.0):
+    # Load the video
+    video = VideoFileClip(input_video_path)
+    
+    # Increase the volume
+    video_with_louder_audio = video.volumex(factor)
+    
+    # Write the result to a new file
+    video_with_louder_audio.write_videofile(output_video_path, codec='libx264', audio_codec='aac')
+
+
 
 
 if __name__ == "__main__":
