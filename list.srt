@@ -1,5 +1,5 @@
 1
-00:00:00,000 --> 00:00:07,998
+00:00:00,000 --> 00:00:07,582
 1. Easy (green)
 2. Easy (green)
 3. Medium (yellow)
@@ -8,8 +8,8 @@
 6. Impossible (purple)
 
 2
-00:00:07,998 --> 00:00:27,592
-1. Golden State Warriors (green)
+00:00:07,582 --> 00:00:25,470
+1. Charli D'Amelio (green)
 2. Easy (green)
 3. Medium (yellow)
 4. Medium (yellow)
@@ -17,47 +17,38 @@
 6. Impossible (purple)
 
 3
-00:00:27,592 --> 00:00:39,848
-1. Golden State Warriors (green)
-2. 😕 (green)
+00:00:25,470 --> 00:00:35,988
+1. Charli D'Amelio (green)
+2. 🙏 (green)
 3. Medium (yellow)
 4. Medium (yellow)
 5. Hard (red)
 6. Impossible (purple)
 
 4
-00:00:39,848 --> 00:00:51,304
-1. Golden State Warriors (green)
-2. 😕 (green)
-3. Napoleon (yellow)
+00:00:35,988 --> 00:00:59,986
+1. Charli D'Amelio (green)
+2. 🙏 (green)
+3. Moon landing (yellow)
 4. Medium (yellow)
 5. Hard (red)
 6. Impossible (purple)
 
 5
-00:00:51,304 --> 00:01:03,350
-1. Golden State Warriors (green)
-2. 😕 (green)
-3. Napoleon (yellow)
-4. 55 (yellow)
+00:00:59,986 --> 00:01:14,218
+1. Charli D'Amelio (green)
+2. 🙏 (green)
+3. Moon landing (yellow)
+4. 7 (yellow)
 5. Hard (red)
 6. Impossible (purple)
 
 6
-00:01:03,350 --> 00:01:19,958
-1. Golden State Warriors (green)
-2. 😕 (green)
-3. Napoleon (yellow)
-4. 55 (yellow)
-5. your Brother (red)
+00:01:14,218 --> 00:01:16,698
+1. Charli D'Amelio (green)
+2. 🙏 (green)
+3. Moon landing (yellow)
+4. 7 (yellow)
+5. Your Coach (red)
 6. Impossible (purple)
-
-7
-00:01:19,958 --> 00:01:22,126
-1. Golden State Warriors (green)
-2. 😕 (green)
-3. Napoleon (yellow)
-4. 55 (yellow)
-5. your Brother (red)
-6. Chocolate (purple)
 

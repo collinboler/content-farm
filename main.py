@@ -63,7 +63,7 @@ def main():
     
 
     # add captions to video 
-    add_captions()
+   
     # coutput.mp4 --> captionoutput.mp4
 
 
@@ -77,7 +77,7 @@ def main():
 
 
     # Overlay timer GIF on the video
-    video_path = 'captionoutput.mp4'
+    video_path = 'output.mp4'
     gif_path = 'Assets/Timer/timer2.gif'
     srt_path = 'gif_timings.srt'
     output_path = 'output.mp4'
@@ -96,9 +96,11 @@ def main():
 
     # add popups to video
 
-    AddPopups.main("output.mp4", 'stickers/bateman', 'popup.srt', "output2.mp4")
+    AddPopups.main("output.mp4", 'stickers/bateman', 'popup.srt', "output.mp4")
     
     # output.mp4 --> output2.mp4 
+
+    add_captions()
 
     # create list srt
      # Example usage
@@ -142,7 +144,7 @@ def main():
     srt_path = "list.srt"  # Ensure you have the correct path to your SRT file
     
 
-    AddList.add_text_to_video("output2.mp4", srt_path, output_path)
+    AddList.add_text_to_video("captionoutput.mp4", srt_path, output_path)
 
     # add_audio_to_video(output_path, "finalresult.mp3")
     # def add_audio_to_video(video_path, audio_path):
