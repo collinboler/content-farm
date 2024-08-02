@@ -137,9 +137,8 @@ def main():
 
     # create timestamp
     timestamp = time.strftime("%Y%m%d-%H%M%S")
-    output_file = f"vids/{timestamp}.mp4"
+    output_path = f"vids/{timestamp}.mp4"
 
-    output_path = output_file
     # ad list
    
     srt_path = "list.srt"  # Ensure you have the correct path to your SRT file
@@ -147,7 +146,7 @@ def main():
 
     AddList.add_text_to_video("captionoutput.mp4", srt_path, output_path)
 
-    increase_volume("captionoutput.mp4", "output.mp4")
+    increase_volume(output_path, "output.mp4")
 
     # add_audio_to_video(output_path, "finalresult.mp3")
     # def add_audio_to_video(video_path, audio_path):

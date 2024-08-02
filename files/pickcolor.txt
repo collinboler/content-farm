@@ -1,0 +1,74 @@
+Pick a color that's a shade of red
+Crimson
+Pick a color that's a shade of red
+Maroon
+Pick a color that's a shade of red
+Ruby
+Pick a color that's a shade of blue
+Teal
+Pick a color that's a shade of blue
+Navy
+Pick a color that's a shade of blue
+Cobalt
+Pick a color that's a shade of blue
+Turquoise
+Pick a color that's a shade of blue
+Aqua
+Pick a color that's a shade of green
+Olive
+Pick a color that's a shade of green
+Mint
+Pick a color that's a shade of green
+Forest Green
+Pick a color that's a shade of yellow
+Gold
+Pick a color that's a shade of yellow
+Beige
+Pick a color that's a shade of yellow
+Apricot
+Pick a color that's a shade of black
+Charcoal
+Pick a color that's a shade of black
+Ebony
+Pick a color that's a shade of black
+Jet
+Pick a color that's a shade of white
+Ivory
+Pick a color that's a shade of white
+Snow
+Pick a color that's a shade of white
+Pearl
+Pick a color that's a shade of orange
+Coral
+Pick a color that's a shade of orange
+Salmon
+Pick a color that's a shade of orange
+Peach
+Pick a color that's a shade of pink
+Rose
+Pick a color that's a shade of pink
+Blush
+Pick a color that's a shade of pink
+Fuchsia
+Pick a color that's a shade of pink
+Hot Pink
+Pick a color that's a shade of pink
+Cerise
+Pick a color that's a shade of purple
+Lavender
+Pick a color that's a shade of purple
+Amethyst
+Pick a color that's a shade of purple
+Violet
+Pick a color that's a shade of brown
+Beige
+Pick a color that's a shade of brown
+Tan
+Pick a color that's a shade of brown
+Chestnut
+Pick a color that's a shade of gray
+Silver
+Pick a color that's a shade of gray
+Slate
+Pick a color that's a shade of gray
+Charcoal

@@ -1,5 +1,5 @@
 1
-00:00:00,000 --> 00:00:07,478
+00:00:00,000 --> 00:00:08,198
 1. Easy (green)
 2. Easy (green)
 3. Medium (yellow)
@@ -8,8 +8,8 @@
 6. Impossible (purple)
 
 2
-00:00:07,478 --> 00:00:26,022
-1. TikTok (green)
+00:00:08,198 --> 00:00:28,056
+1. Charli D'Amelio (green)
 2. Easy (green)
 3. Medium (yellow)
 4. Medium (yellow)
@@ -17,46 +17,47 @@
 6. Impossible (purple)
 
 3
-00:00:26,022 --> 00:00:37,278
-1. TikTok (green)
-2. 🙌 (green)
+00:00:28,056 --> 00:00:40,816
+1. Charli D'Amelio (green)
+2. 😩 (green)
 3. Medium (yellow)
 4. Medium (yellow)
 5. Hard (red)
 6. Impossible (purple)
 
 4
-00:00:37,278 --> 00:00:48,974
-1. TikTok (green)
-2. 🙌 (green)
-3. salsa (yellow)
+00:00:40,816 --> 00:00:52,298
+1. Charli D'Amelio (green)
+2. 😩 (green)
+3. Oak (yellow)
 4. Medium (yellow)
 5. Hard (red)
 6. Impossible (purple)
 
 5
-00:00:48,974 --> 00:00:06,710
-1. TikTok (green)
-2. 🙌 (green)
-3. salsa (yellow)
-4. 83 (yellow)
+00:00:52,298 --> 00:01:05,586
+1. Charli D'Amelio (green)
+2. 😩 (green)
+3. Oak (yellow)
+4. Pearl (yellow)
 5. Hard (red)
 6. Impossible (purple)
 
 6
-00:00:06,710 --> 00:01:15,468
-1. TikTok (green)
-2. 🙌 (green)
-3. salsa (yellow)
-4. 83 (yellow)
-5. Your Coach (red)
+00:01:05,586 --> 00:01:20,540
+1. Charli D'Amelio (green)
+2. 😩 (green)
+3. Oak (yellow)
+4. Pearl (yellow)
+5. Your Grandpa (red)
 6. Impossible (purple)
 
 7
-00:01:15,468 --> 00:01:17,556
-1. TikTok (green)
-2. 🙌 (green)
-3. salsa (yellow)
-4. 83 (yellow)
-5. Your Coach (red)
-6. PlayStation (purple)
+00:01:20,540 --> 00:01:22,940
+1. Charli D'Amelio (green)
+2. 😩 (green)
+3. Oak (yellow)
+4. Pearl (yellow)
+5. Your Grandpa (red)
+6. Hot (purple)
+

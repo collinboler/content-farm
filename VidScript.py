@@ -47,7 +47,7 @@ def randomQ3():
     return random_2_lines("files/Questions.txt")
 
 def randomQ4():
-    return random_2_lines("files/picknumber.txt")
+    return random_2_lines("files/pickcolor.txt")
 
 def randomQ6():
     return random_2_lines("files/5050.txt")

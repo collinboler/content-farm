@@ -1,5 +1,12 @@
 import re
 
+import inflect
+
+p = inflect.engine()
+
+# def number_to_words(text):
+#     return p.number_to_words(text) if text.isdigit() else text
+
 def extract_timestamps(subtitles_file, answers2):
     with open(subtitles_file, 'r') as file:
         content = file.read()
@@ -49,12 +56,6 @@ def create_new_srt(new_srt_file, timestamps, answers):
                 file.write(f'{i+2}\n{start} --> {timestamps[i+1][0]}\n{sections[section_index]}\n\n')
             else:
                 file.write(f'{i+2}\n{start} --> {end}\n{sections[section_index]}\n\n')
-        
-        # # Writing the final section from the last timestamp to the final timestamp of the video
-        # final_section = f'1. {answers[0]} (green)\n2. {answers[1]} (green)\n3. {answers[2]} (yellow)\n4. {answers[3]} (yellow)\n5. {answers[4]} (red)\n6. {answers[5]} (purple)'
-        # file.write(f'{len(timestamps) + 2}\n{timestamps[-1][1]} --> {timestamps[-1][1]}\n{final_section}\n\n')
-
-import re
 
 def modify_srt_file(input_srt_file, output_srt_file):
     """
@@ -94,7 +95,7 @@ def modify_srt_file(input_srt_file, output_srt_file):
         Modify the SRT content as specified.
         """
         # Adjust the end timestamp of the 6th subtitle to the start of the last subtitle
-        subtitles[5]['end'] = subtitles[-1]['start']
+        subtitles[5]['end'] = subtitles[-2]['start']
 
         # Remove the 7th subtitle
         del subtitles[6]
@@ -124,19 +125,36 @@ def modify_srt_file(input_srt_file, output_srt_file):
 
     print(f"Modified SRT file has been saved as {output_srt_file}")
 
-
-
-
 def main(answers):
-# # Example usage
     subtitles_file = 'subtitles.srt'
-    new_srt_file = 'list2.srt'
-    answers = ["TikTok", "🙌", "salsa", "83", "Your Coach", "PlayStation"]
+    new_srt_file = 'list.srt'
+   
 
     # Copy answers to answers2 and modify as specified
-    answers2 = [answer.split()[0] if len(answer.split()) > 1 else answer for answer in answers]
+    answers2 = answers.copy()
+   
+    # answers2[3] = number_to_words(answers2[3])
+    
+    answers2 = [s.replace('-', ' ') for s in answers2]
+    
+    answers2 = [answer.split()[1] if len(answer.split()) > 1 else answer for answer in answers]
+
     answers2[1] = "specific"
-    answers2[1] = "specific"
+  
+    
+    for answer in answers2:
+        print(answer)
+
+    print('answers2p[1]: ' + answers2[1])
+
     timestamps = extract_timestamps(subtitles_file, answers2)
+    for timestamp in timestamps:
+        print(timestamp)
+    
     create_new_srt(new_srt_file, timestamps, answers)
-    modify_srt_file(new_srt_file, "list.srt")
+    # modify_srt_file(new_srt_file, new_srt_file)
+
+# Call main function
+if __name__ == "__main__":
+   answers = ["Stephen King", "👀", "Harry Potter", "Forest Green", "Your Coach", "Fiction"]
+   main(answers)
