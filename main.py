@@ -169,7 +169,7 @@ def main():
     #     video.write_videofile("output.mp4", codec="libx264", audio_codec="aac")
 
 
-def increase_volume(input_video_path, output_video_path, factor=3.0):
+def increase_volume(input_video_path, output_video_path, factor=10.0):
     # Load the video
     video = VideoFileClip(input_video_path)
     
