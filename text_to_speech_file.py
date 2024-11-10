@@ -54,3 +54,6 @@ def text_to_speech_file(text: str, save_file_path: str) -> str:
 
 
 # print(ELEVENLABS_API_KEY)
+
+if __name__ == "__main__" :
+   text_to_speech_file("I'm patrick bateman. Though I may hide my cold gaze.", 'test.mp4')

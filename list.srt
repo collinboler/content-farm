@@ -1,5 +1,5 @@
 1
-00:00:00,000 --> 00:00:08,958
+00:00:00,000 --> 00:00:07,473
 1. Easy (green)
 2. Easy (green)
 3. Medium (yellow)
@@ -8,8 +8,8 @@
 6. Impossible (purple)
 
 2
-00:00:08,958 --> 00:00:28,544
-1. Buffalo Bills (green)
+00:00:07,473 --> 00:00:27,003
+1. Gordon Ramsay (green)
 2. Easy (green)
 3. Medium (yellow)
 4. Medium (yellow)
@@ -17,47 +17,47 @@
 6. Impossible (purple)
 
 3
-00:00:28,544 --> 00:00:39,672
-1. Buffalo Bills (green)
-2. 😅 (green)
+00:00:27,003 --> 00:00:37,443
+1. Gordon Ramsay (green)
+2. 😠 (green)
 3. Medium (yellow)
 4. Medium (yellow)
 5. Hard (red)
 6. Impossible (purple)
 
 4
-00:00:39,672 --> 00:00:51,008
-1. Buffalo Bills (green)
-2. 😅 (green)
-3. Painting (yellow)
+00:00:37,443 --> 00:00:49,539
+1. Gordon Ramsay (green)
+2. 😠 (green)
+3. Labrador (yellow)
 4. Medium (yellow)
 5. Hard (red)
 6. Impossible (purple)
 
 5
-00:00:51,008 --> 00:01:03,966
-1. Buffalo Bills (green)
-2. 😅 (green)
-3. Painting (yellow)
-4. Maroon (yellow)
+00:00:49,539 --> 00:01:02,497
+1. Gordon Ramsay (green)
+2. 😠 (green)
+3. Labrador (yellow)
+4. Peach (yellow)
 5. Hard (red)
 6. Impossible (purple)
 
 6
-00:01:03,966 --> 00:01:18,670
-1. Buffalo Bills (green)
-2. 😅 (green)
-3. Painting (yellow)
-4. Maroon (yellow)
-5. Your Landlord (red)
+00:01:02,497 --> 00:01:15,745
+1. Gordon Ramsay (green)
+2. 😠 (green)
+3. Labrador (yellow)
+4. Peach (yellow)
+5. Your Accountant (red)
 6. Impossible (purple)
 
 7
-00:01:18,670 --> 00:01:20,470
-1. Buffalo Bills (green)
-2. 😅 (green)
-3. Painting (yellow)
-4. Maroon (yellow)
-5. Your Landlord (red)
-6. Basketball (purple)
+00:01:15,745 --> 00:01:16,425
+1. Gordon Ramsay (green)
+2. 😠 (green)
+3. Labrador (yellow)
+4. Peach (yellow)
+5. Your Accountant (red)
+6. Hot (purple)
 
